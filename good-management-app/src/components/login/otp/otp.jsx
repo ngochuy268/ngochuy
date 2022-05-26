@@ -36,7 +36,7 @@ function OTP() {
           setStep('VERIFY_SUCCESS');
 		})
         .catch((err) => {
-          alert("Incorrect code");
+          setStep('VERIFY_FAIL');
        })
 	}
 
@@ -71,13 +71,13 @@ function OTP() {
                         <input type="number" maxLength='1' className="form-control"  />
                     </div>  */}
                     {step === 'INPUT_PHONE_NUMBER' &&
-                  <div>
-                    <input value={phoneNumber} onChange={(e) => { setPhoneNumber(e.target.value) }}
-                      placeholder="phone number" />
-                    <br/><br/>
-                    <div id="recaptcha-container"></div>
-                    <button onClick={signin}>Send OTP</button>
-                  </div>
+                      <div>
+                        <input value={phoneNumber} onChange={(e) => { setPhoneNumber(e.target.value) }}
+                          placeholder="phone number"/>
+                        <br/><br/>
+                        <div id="recaptcha-container"></div>
+                        <button onClick={signin}>Send OTP</button>
+                      </div>
                 }
 
                 {step === 'VERIFY_OTP' &&

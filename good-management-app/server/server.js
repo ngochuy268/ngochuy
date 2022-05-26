@@ -26,7 +26,7 @@ app.post('/login', (req, res) => {
                     res.send(result);
                 }
                 else {
-                    res.send({ messagae: "Tài khoản hoặc mật khẩu nhập sai!"})
+                    res.send({ message: "Tài khoản hoặc mật khẩu nhập sai!"})
                 }
             }
         }

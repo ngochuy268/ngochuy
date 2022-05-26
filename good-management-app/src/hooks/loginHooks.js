@@ -2,16 +2,20 @@ import { useState } from "react"
 
 
 // Login
-export const useHookStateOfReg = () => {
+export const useHookStateName = () => {
     const [username, setUsername] = useState('');
     return [username, setUsername];
 }
 
-export const useHookState = () => {
+export const useHookStatePassword = () => {
     const [password, setPassword] = useState('');
     return [password, setPassword];
 }
 
+export const useHookStateValidate = () => {
+    const [validationMsg, setValidationMsg] = useState('');
+    return [validationMsg, setValidationMsg];
+}
 
 //OTP
 export const useHookPhone = () => {
